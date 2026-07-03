@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Cyber Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div id="main-menu" class="screen">
+            <h1>CYBER SNAKE</h1>
+            <p class="subtitle">Trò chơi nâng cao - Phiên bản Canvas</p>
+            <div class="level-selection">
+                <p>Chọn cấp độ (Уровень):</p>
+                <button class="btn level-btn active" data-level="1">Dễ (Wrap-around)</button>
+                <button class="btn level-btn" data-level="2">Trung bình (Borders)</button>
+                <button class="btn level-btn" data-level="3">Khó (Obstacles)</button>
+            </div>
+            <button id="start-btn" class="btn primary-btn">BẮT ĐẦU CHƠI</button>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <div class="hud">
+                <div class="hud-item">LEVEL: <span id="level-display">1</span></div>
+                <div class="hud-item">SCORE: <span id="score">0</span></div>
+                <div class="hud-item">HIGH SCORE: <span id="high-score">0</span></div>
+            </div>
+            <canvas id="gameCanvas" width="500" height="500"></canvas>
+            <p class="controls-guide">Dùng các phím mũi tên hoặc WASD để di chuyển</p>
+        </div>
+
+        <div id="game-over-screen" class="screen hidden">
+            <h1 id="game-over-title">GAME OVER</h1>
+            <p class="final-score-text">Điểm số của bạn: <span id="final-score">0</span></p>
+            <button id="restart-btn" class="btn primary-btn">CHƠI LẠI</button>
+            <div class="level-selection">
+                <p style="margin-top: 25px;">Chọn cấp độ khác:</p>
+                <button class="btn level-btn-gameover" data-level="1">Dễ (Wrap-around)</button>
+                <button class="btn level-btn-gameover" data-level="2">Trung bình (Borders)</button>
+                <button class="btn level-btn-gameover" data-level="3">Khó (Obstacles)</button>
+            </div>
+            <button id="menu-btn" class="btn" style="margin-top: 15px;">QUAY LẠI MENU</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
